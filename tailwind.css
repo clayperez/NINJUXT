@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Nobody uses a red BG color, but this illustrates that this file is automatically applied at the very tip top of our entire application and can be used to style it right out of the gate! */
+  @apply bg-red-600;
+}
