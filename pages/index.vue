@@ -1,9 +1,15 @@
 <template>
-  <div>INDEX <span class="mdi mdi-fingerprint"></span></div>
+  <div>
+    INDEX <span class="mdi mdi-fingerprint"></span>
+    <dnd />
+  </div>
 </template>
 
 <script>
-export default {}
+import dnd from '@/components/dnd.vue'
+export default {
+  components: { dnd },
+}
 </script>
 
 <style type="scss"></style>

@@ -11,6 +11,7 @@ Just get it done (replace projectname with your project's name, duh):
 ```bash
 vue init michalzaq12/electron-nuxt projectname
 cd projectname
+
 yarn
 yarn add --dev @nuxtjs/tailwindcss postcss@latest
 yarn add --dev @nuxtjs/google-fonts
