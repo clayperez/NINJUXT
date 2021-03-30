@@ -15,6 +15,11 @@ yarn
 yarn add --dev @nuxtjs/tailwindcss postcss@latest
 yarn add --dev @nuxtjs/google-fonts
 
+# Upgrade MDI Font and add NUXT module
+# https://pictogrammers.github.io/@mdi/font/5.9.55/
+yarn add @mdi/font --latest
+yarn add nuxtjs-mdi-font
+
 # Try to copy root files if executing into a folder you'll move when this is done
 mkdir ./src/renderer/assets/css
 yes | cp -rf ../tailwind.css ./src/renderer/assets/css/
@@ -108,6 +113,8 @@ Make clean code really straightforward. Make sure to also configure VSCode to au
 }
 ```
 
+## VS CODE SETTINGS
+
 **VSCODE USER SETTINGS**
 
 ```json
@@ -116,12 +123,10 @@ Make clean code really straightforward. Make sure to also configure VSCode to au
 }
 ```
 
-**ESLINT PRETTIER**  
-https://github.com/prettier/eslint-config-prettier  
- If we're gonna use ESLINT ??
+**VSCODE PLUGINS**
 
-## EXTRA FANCY
+### [MDI Icon Intellisense](https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense)
 
-- **SOUND**: https://howlerjs.com/
-- **ICONS**: https://github.com/chungtran4078/nuxtjs-mdi-font#readme  
-  **REFERENCE**: https://materialdesignicons.com/ <-- Install the latest version of this which is what NUXT-MDI-FONT uses
+### [Prettier Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+### [Tailwind Intellisense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)

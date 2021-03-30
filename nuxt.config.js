@@ -25,5 +25,5 @@ module.exports = {
   loading: false,
   plugins: [{ ssr: true, src: '@/plugins/icons.js' }],
   buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
-  modules: [],
+  modules: ['nuxtjs-mdi-font'],
 }
