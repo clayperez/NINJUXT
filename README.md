@@ -26,6 +26,15 @@ yes | cp -rf ../tailwind.css ./src/renderer/assets/css/
 yes | cp -rf ../nuxt.config.js ./src/renderer/
 yes | cp -rf ../tailwind.config.js ./src/renderer/
 yes | cp -rf ../.prettierrc ./
+yes | cp -rf ../changelog.md ./
+
+# Replace the contents of the default app with my own VUE files
+rm -f ./src/renderer/components/*.*
+rm -f ./src/renderer/layouts/*.*
+rm -f ./src/renderer/pages/*.*
+cp -rf ../components ./src/renderer
+cp -rf ../layouts ./src/renderer
+cp -rf ../pages ./src/renderer
 ```
 
 ---
