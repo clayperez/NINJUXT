@@ -13,6 +13,7 @@ vue init michalzaq12/electron-nuxt projectname
 cd projectname
 yarn
 yarn add --dev @nuxtjs/tailwindcss postcss@latest
+yarn add --dev @nuxtjs/google-fonts
 
 # Try to copy root files if executing into a folder you'll move when this is done
 mkdir ./src/renderer/assets/css
@@ -21,12 +22,6 @@ yes | cp -rf ../nuxt.config.js ./src/renderer/
 yes | cp -rf ../tailwind.config.js ./src/renderer/
 yes | cp -rf ../.prettierrc ./
 ```
-
-**THEN**
-
-1. Copy **`.tailwind.css`** file into `./src/renderer/assets/css/`
-1. Copy **`nuxt.config.js`** file into `./src/`
-1. Copy **`.prettierrc`** file from boilerplate into root directory
 
 ---
 

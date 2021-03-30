@@ -14,10 +14,16 @@ module.exports = {
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
-    jit: false,
+    jit: true,
+  },
+  googleFonts: {
+    families: {
+      Poppins: true,
+    },
+    download: true,
   },
   loading: false,
   plugins: [{ ssr: true, src: '@/plugins/icons.js' }],
-  buildModules: ['@nuxtjs/tailwindcss'],
+  buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
   modules: [],
 }

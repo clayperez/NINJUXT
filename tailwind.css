@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
   /* This is hidious. */
-  @apply border-4 border-red-600;
+  @apply bg-green-300;
+  font-family: 'Poppins';
 }
