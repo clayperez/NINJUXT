@@ -33,7 +33,7 @@ Found I had to restart VSCode for Intelisense to work properly.
 
 **Remember!** `tailwind.js` goes into the renderer subfolder when using electron-nuxt because of its unique folder structure implementation.
 
-```json
+```javascript
 const colors = require('tailwindcss/colors')
 
 module.exports = {
@@ -42,13 +42,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {}
-    }
+      colors: {},
+    },
   },
   variants: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 }
 ```
 
