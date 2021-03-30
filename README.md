@@ -1,8 +1,38 @@
 # CCP Electron Nuxt Tailwind Boilerplate
 
-> Make it easy to start anew...
+My boilerplate setup to get an Electron NUXT app going pronto!
 
-## CORE DEPENDENCIES
+---
+
+# TLDR;
+
+Just get it done (replace projectname with your project's name, duh):
+
+```bash
+vue init michalzaq12/electron-nuxt projectname
+cd projectname
+yarn
+yarn add --dev @nuxtjs/tailwindcss postcss@latest
+
+# Try to copy root files if executing into a folder you'll move when this is done
+mkdir ./src/renderer/assets/css
+yes | cp -rf ../tailwind.css ./src/renderer/assets/css/
+yes | cp -rf ../nuxt.config.js ./src/renderer/
+yes | cp -rf ../tailwind.config.js ./src/renderer/
+yes | cp -rf ../.prettierrc ./
+```
+
+**THEN**
+
+1. Copy **`.tailwind.css`** file into `./src/renderer/assets/css/`
+1. Copy **`nuxt.config.js`** file into `./src/`
+1. Copy **`.prettierrc`** file from boilerplate into root directory
+
+---
+
+# THE SLOWER DETAILED WAY
+
+Here's how I arrived at the above quick & dirty:
 
 ### 1: ELECTRON-NUXT:
 
@@ -24,7 +54,9 @@ yarn dev
 
 ### 2: TAILWIND NUXT:
 
-Make it easy to style-up! Tailwindcss is the SHIT!
+Make it easy to style-up! TailwindCSS is the SHIT!
+
+`yarn add --dev @nuxtjs/tailwindcss postcss@latest`
 
 [@Nuxt/Tailwind Setup](https://tailwindcss.nuxtjs.org/setup) and [Tailwind Docs](https://tailwindcss.com/docs/guides/nuxtjs#include-tailwind-in-your-css) and [Tailwind CSS Intelisense Plugin](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) and `jit: true` for [@tailwindcss/jit](https://github.com/tailwindlabs/tailwindcss-jit)  
 Found I had to restart VSCode for Intelisense to work properly.
@@ -62,8 +94,8 @@ Place default tailwind.css file inside `~/assets/css/tailwind.css`
 @tailwind utilities;
 
 body {
-  /* Nobody uses a red BG color, but this illustrates that this file is automatically applied at the very tip top of our entire application and can be used to style it right out of the gate! */
-  @apply bg-red-600;
+  /* This is hidious. */
+  @apply border-4 border-red-600;
 }
 ```
 
