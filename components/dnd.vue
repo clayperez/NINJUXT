@@ -48,7 +48,7 @@
 export default {
   data() {
     return {
-      filelist: []
+      filelist: [],
     }
   },
   methods: {
@@ -72,6 +72,15 @@ export default {
       event.currentTarget.classList.remove('bg-green-300')
     },
     drop(event) {
+      const fileURL = event.dataTransfer.getData('URL')
+      console.warn('⬇️ Drop event:', event.dataTransfer.dropEffect)
+      if (fileURL) {
+        // IMAGE DROPPED IS FROM A URL -- PARSE IT USING FETCH
+        console.warn({ fileURL })
+        fetch(fileURL)
+          .then((response) => response.blob())
+          .then((blob) => console.log(blob))
+      }
       this.$refs.file.files = event.dataTransfer.files
       this.onChange() // Trigger the onChange event manually
       // Clean up
@@ -80,8 +89,8 @@ export default {
     },
     clickFile(file) {
       console.log('File clicked', file)
-    }
-  }
+    },
+  },
 }
 </script>
 
